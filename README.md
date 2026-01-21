@@ -2,8 +2,6 @@
 
 A bag to save your favorite outfits. Simple, works well.
 
-![image](https://postimg.cc/xksFysLm)
-
 ## What it does
 
 - Save up to 5 outfits
