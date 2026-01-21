@@ -2,7 +2,7 @@
 
 A bag to save your favorite outfits. Simple, works well.
 
-![Preview](preview.png)
+![Preview]([preview.png](https://cdn.discordapp.com/attachments/1335760717110054914/1463350866089214045/Screenshot_2026-01-21_015114.png?ex=69718332&is=697031b2&hm=391e6b2a2a6574ffb1713f8dfce1fb59823fc780baf35a138d8cf4f14fde3907&))
 
 ## What it does
 
