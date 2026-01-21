@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- R4X Outfit Bag by R4X Labs -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R4X Outfit Bag</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="outfit-bag" class="hidden">
+        <!-- Borsa 3D -->
+        <div class="bag-container">
+            <!-- Manico della borsa -->
+            <div class="bag-handle">
+                <div class="handle-strap"></div>
+            </div>
+            
+            <!-- Corpo della borsa -->
+            <div class="bag-body">
+                <!-- Cerniera/zip -->
+                <div class="bag-zipper">
+                    <div class="zipper-pull"></div>
+                </div>
+                
+                <!-- Interno della borsa -->
+                <div class="bag-interior">
+                    <!-- Header interno -->
+                    <div class="bag-header">
+                        <div class="bag-label">
+                            <i class="fas fa-tshirt"></i>
+                            <span>I MIEI OUTFIT</span>
+                        </div>
+                        <div class="outfit-counter" id="outfit-count">0/5</div>
+                    </div>
+                    
+                    <!-- Sezione salvataggio -->
+                    <div class="save-pocket">
+                        <input type="text" id="outfit-name" placeholder="Nome nuovo outfit..." maxlength="20">
+                        <button id="save-btn" class="save-button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Scomparti per outfit -->
+                    <div class="outfit-compartments" id="outfit-list">
+                        <!-- Slot 1 -->
+                        <div class="outfit-slot empty" data-slot="0">
+                            <div class="slot-content">
+                                <div class="empty-slot">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slot 2 -->
+                        <div class="outfit-slot empty" data-slot="1">
+                            <div class="slot-content">
+                                <div class="empty-slot">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slot 3 -->
+                        <div class="outfit-slot empty" data-slot="2">
+                            <div class="slot-content">
+                                <div class="empty-slot">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slot 4 -->
+                        <div class="outfit-slot empty" data-slot="3">
+                            <div class="slot-content">
+                                <div class="empty-slot">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slot 5 -->
+                        <div class="outfit-slot empty" data-slot="4">
+                            <div class="slot-content">
+                                <div class="empty-slot">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasca inferiore -->
+                    <div class="bag-pocket">
+                        <span><i class="fas fa-keyboard"></i> ESC per chiudere</span>
+                    </div>
+                </div>
+                
+                <!-- Cuciture decorative -->
+                <div class="stitching left"></div>
+                <div class="stitching right"></div>
+            </div>
+            
+            <!-- Bottone chiusura -->
+            <button class="close-bag" id="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Conferma Eliminazione -->
+    <div id="delete-modal" class="modal hidden">
+        <div class="modal-bag">
+            <div class="modal-icon">
+                <i class="fas fa-trash-alt"></i>
+            </div>
+            <h3>Eliminare outfit?</h3>
+            <p>Questa azione non può essere annullata</p>
+            <div class="modal-buttons">
+                <button class="btn-cancel" id="cancel-delete">Annulla</button>
+                <button class="btn-confirm" id="confirm-delete">Elimina</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Azioni Outfit -->
+    <div id="action-modal" class="modal hidden">
+        <div class="action-menu">
+            <button class="action-btn wear" id="wear-outfit">
+                <i class="fas fa-tshirt"></i>
+                <span>Indossa</span>
+            </button>
+            <button class="action-btn delete" id="delete-outfit">
+                <i class="fas fa-trash"></i>
+                <span>Elimina</span>
+            </button>
+            <button class="action-btn cancel" id="cancel-action">
+                <i class="fas fa-times"></i>
+                <span>Annulla</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Container Notifiche Custom -->
+    <div id="notifications-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
